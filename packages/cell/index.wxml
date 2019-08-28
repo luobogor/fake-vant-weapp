@@ -1,0 +1,8 @@
+<view
+  class="custom-class"
+  hover-class="van-cell--hover hover-class"
+  hover-stay-time="70"
+  style="{{ customStyle }}"
+  bind:tap="onClick">
+
+</view>

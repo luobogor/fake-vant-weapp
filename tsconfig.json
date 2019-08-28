@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "types": ["miniprogram-api-typings"],
+    "paths": {
+      "definitions/*": ["./packages/definitions/*"]
+    }
+  }
+}
