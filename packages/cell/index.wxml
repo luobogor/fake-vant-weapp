@@ -5,4 +5,15 @@
   style="{{ customStyle }}"
   bind:tap="onClick">
 
+  <view
+    style="{{ titleWidth ? 'max-width:' + titleWidth + ';min-width:' + titleWidth : '' }}"
+    class="van-cell__title title-class">
+    <block wx:if="{{ title }}">{{ title }}</block>
+    <slot wx:else name="title" />
+  </view>
+
+  <view class="van-cell__value value-class">
+    <block wx:if="{{ value || value === 0 }}">{{ value }}</block>
+    <slot wx:else />
+  </view>
 </view>
