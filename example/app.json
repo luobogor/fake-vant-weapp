@@ -1,6 +1,6 @@
 {
   "pages": [
-    "pages/dashboard/index",
+    "pages/dashboard/index"
   ],
   "window": {
     "navigationBarBackgroundColor": "#f8f8f8",
