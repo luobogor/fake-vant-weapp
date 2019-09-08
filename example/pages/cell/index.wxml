@@ -1,0 +1,4 @@
+<demo-block title="页面跳转">
+  <van-cell title="单元格" is-link url="/pages/dashboard/index" />
+  <van-cell title="单元格" is-link url="/pages/dashboard/index" link-type="redirectTo" />
+</demo-block>

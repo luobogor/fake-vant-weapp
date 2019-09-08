@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/cell/index",
     "pages/dashboard/index"
   ],
   "window": {
@@ -9,6 +10,8 @@
     "backgroundTextStyle": "dark",
     "backgroundColor": "#f8f8f8"
   },
-  "usingComponents": {},
+  "usingComponents": {
+    "demo-block": "../../components/demo-block/index"
+  },
   "sitemapLocation": "sitemap.json"
 }
