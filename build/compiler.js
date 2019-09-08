@@ -8,10 +8,10 @@ const util = require('util');
 const exec = util.promisify(require('child_process').exec);
 
 const src = path.resolve(__dirname, '../packages');
+const icons = path.resolve(__dirname, '../node_modules/@vant/icons');
 // ts config
 const exampleConfig = path.resolve(__dirname, '../tsconfig.example.json');
 const exampleDir = path.resolve(__dirname, '../example/dist');
-
 
 const compileLess = dist => () =>
   gulp
@@ -20,7 +20,6 @@ const compileLess = dist => () =>
     .pipe(postcss())
     .pipe(
       insert.transform((contents, file) => {
-        // todo ???
         if (!file.path.includes('packages' + path.sep + 'common')) {
           contents = `@import '../common/index.wxss';${contents}`;
         }
@@ -54,6 +53,7 @@ module.exports = {
       compileTs(exampleConfig, exampleDir),
       compileLess(exampleDir),
       copyStatic(exampleDir),
+      () => gulp.src(`${icons}/**/*`).pipe(gulp.dest(`${exampleDir}/@vant/icons`)),
       () => {
         gulp.watch(`${src}/**/*.ts`, compileTs(exampleConfig, exampleDir));
         gulp.watch(`${src}/**/*.less`, compileLess(exampleDir));
@@ -63,4 +63,4 @@ module.exports = {
       }
     )
   )
-}
+};
