@@ -26,6 +26,7 @@ Vue -> VantComponent -> Mina
 @vant/icon 独立的包
 
 # BEM
+可引入实际项目中使用，这样就不用在标签中写三元表达式判断是否添加 class。还有可以在 template 中引入 wxs
 
 ```
 utils.bem('cell', [size, { center, required, borderless: !border, clickable: isLink || clickable }])

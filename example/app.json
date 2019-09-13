@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/button/index",
     "pages/cell/index",
     "pages/dashboard/index"
   ],
@@ -13,7 +14,8 @@
   "usingComponents": {
     "demo-block": "../../components/demo-block/index",
     "van-cell-group": "../../dist/cell-group/index",
-    "van-cell": "../../dist/cell/index"
+    "van-button": "../../dist/cell/index",
+    "van-cell": "../../dist/button/index"
   },
   "sitemapLocation": "sitemap.json"
 }
