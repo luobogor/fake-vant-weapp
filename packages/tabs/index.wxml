@@ -1,0 +1,17 @@
+<wxs src="../wxs/utils.wxs" module="utils" />
+
+<view class="custom-class {{ utils.bem('tabs', [type]) }}">
+  <view style="z-index: {{ zIndex }}; {{ wrapStyle }}" class="{{ utils.bem('tabs__wrap', { scrollable }) }} {{ type === 'line' && border ? 'van-hairline--top-bottom' : '' }}">
+  </view>
+  <view
+    class="van-tabs__content"
+    bind:touchstart="onTouchStart"
+    bind:touchmove="onTouchMove"
+    bind:touchend="onTouchEnd"
+    bind:touchcancel="onTouchEnd"
+  >
+    <view class="van-tabs__track" style="{{ trackStyle }}">
+      <slot />
+    </view>
+  </view>
+</view>
