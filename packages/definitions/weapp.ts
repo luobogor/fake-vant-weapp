@@ -48,6 +48,11 @@ export namespace Weapp {
     | FunctionConstructor
     | null;
 
+  export interface TouchEvent extends Event {
+    touches: Array<Touch>
+    changedTouches: Array<Touch>
+  }
+  
   export interface PropertyOption {
     [name: string]: PropertyType | PropertyType[] | {
       /** 属性类型 */
