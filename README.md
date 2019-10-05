@@ -34,3 +34,16 @@ utils.bem('cell', [size, { center, required, borderless: !border, clickable: isL
 
 数组内可以是 String、Number、Object，如果是 String、Number 直接当胶 element 拼接到 block，如果是 Object，只有当 value 为 true 时才将 key 拼接当作  element 拼接上了，
 还可以是 Array，Array 则递归重复以上步骤 
+
+# CSS
+currentColor 是 CSS3 的一个关键字，获取当前 color 属性的值
+
+选择空非空标签
+
+```css
+  &__icon + &__text:not(:empty) {
+    display: inline-block;
+    margin-left: 5px;
+    vertical-align: top;
+  }
+```
